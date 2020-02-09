@@ -9,7 +9,7 @@
 
 ## Run the project
 
-Clone project to local folder then go to customer-mangement project
+Clone project to local folder then go to customer-management folder
 
 Run
 ```
