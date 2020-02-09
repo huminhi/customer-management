@@ -7,3 +7,6 @@ class CustomerForm(forms.ModelForm):
     class Meta:
         model = Customer
         fields = '__all__'
+
+    name = forms.CharField(required=True)
+    phone = forms.CharField(required=True)

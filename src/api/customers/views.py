@@ -26,4 +26,4 @@ class CustomerView(viewsets.ModelViewSet):
         else:
             serializer = self.get_serializer(data=request.data)
             serializer.is_valid(raise_exception=True)
-        return
+            return Response(form.errors, status=status.HTTP_400_BAD_REQUEST)
