@@ -11,8 +11,4 @@ RUN apt install git
 RUN pip install --upgrade pip setuptools && \
     pip install -r requirements.txt
 
-RUN python manage.py migrate
-
-RUN python manage.py seed
-
 EXPOSE 8000
