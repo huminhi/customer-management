@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+  app:
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile
+    command: bash entrypoint.sh
+    volumes:
+      - ../:/usr/src/app
+    ports:
+      - "8000:8000"
+    environment:
+      DJANGO_SETTINGS_MODULE: src.conf.settings.development
+      HOST: db
+      PORT: 5432
+      NAME: cm_development
+      USER: postgres
+      PASSWORD: 123456
+    depends_on:
+      - redis
+      - db
+
+  redis:
+    image: redis
+
+  db:
+    image: postgres
+    volumes:
+      - ../../data/postgres:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: cm_development
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123456
