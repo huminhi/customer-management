@@ -35,7 +35,7 @@ Make a GET request to get customers that have their phone starts with a specific
 
 Make a POST request to create a customer
 ```
-127.0.0.1:8000/api/customers
+127.0.0.1:8000/api/customers/
 ```
 
 with a form of
