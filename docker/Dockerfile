@@ -6,8 +6,6 @@ WORKDIR /usr/src/app
 
 ADD . .
 
-RUN apt install git
-
 RUN pip install --upgrade pip setuptools && \
     pip install -r requirements.txt
 

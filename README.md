@@ -16,6 +16,8 @@ Run
 docker-compose -f docker/production.yml up -d
 ```
 
+It may take few seconds for your system to run
+
 ## Get customers
 You can use [postman](https://www.postman.com/) to interact with the APIs
 
