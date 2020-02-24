@@ -16,6 +16,11 @@ Run
 docker-compose -f docker/production.yml up -d
 ```
 
+Rebuild app
+```
+docker-compose -f docker/production.yml up -d --build
+```
+
 It may take few seconds for your system to run
 
 ## Get customers

@@ -1,9 +1,8 @@
 #!/bin/bash
 
-while ! curl http://db:5432/ 2>&1 | grep '52'
-do
-  sleep 1
-done
+# Test database connection
+echo "Testing database connection"
+python test_db.py
 
 # Apply database migrations
 echo "Apply database migrations"

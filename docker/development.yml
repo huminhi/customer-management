@@ -5,21 +5,16 @@ services:
 #    build:
 #      context: ../
 #      dockerfile: docker/Dockerfile
-#    command: bash entrypoint.sh
+#    command: ./entrypoint.sh
 #    volumes:
 #      - ../:/usr/src/app
 #    ports:
 #      - "8000:8000"
-#    environment:
-#      DJANGO_SETTINGS_MODULE: src.conf.settings.development
-#      HOST: db
-#      PORT: 5432
-#      NAME: cm_development
-#      USER: postgres
-#      PASSWORD: 123456
-#    depends_on:
-#      - redis
+#    links:
 #      - db
+#    depends_on:
+#      - db
+#      - redis
 
   redis:
     image: redis
